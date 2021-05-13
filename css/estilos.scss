@@ -1,0 +1,427 @@
+/* FUENTE */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,500;0,700;0,800;1,400&display=swap');
+
+$bodyfont: 'Raleway', sans-serif;
+$rojo: #B04900;
+$amarillo: #D9B64E;
+$gris: #5d5d5d;
+$sombra: rgba(122, 122, 122, 0.6);
+
+
+body {
+  font-family: $bodyfont;
+  font-weight: normal;
+  line-height: 28px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $bodyfont;
+  font-weight: 800;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.blog__titular, h1, h2, h3{
+	color: $amarillo;
+}
+
+a {
+	color: $amarillo;
+}
+
+.migajas {
+	margin-left: 5rem;
+    margin-top: 1em;
+}
+
+
+/* FONDO */
+
+body{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(244,244,244,1) 100%);
+}
+
+
+@mixin contenedor{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 8px 2px $sombra ;
+  background-color: white;
+  padding: 4rem;
+  border-radius: 1rem;
+}
+
+#maincontent {
+  width: 80%;
+  margin: auto;
+}
+
+/* MENU */
+.menu-bs  {
+  z-index: 1;
+  background: $amarillo;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-around;
+  font-family: $bodyfont;
+  font-weight: 700;
+}
+
+
+#navbarSupportedContent a:hover {
+  color: #fff !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #fff !important;
+}
+
+.menu-logo {
+  margin-right: 50px;
+}
+
+/*  TOP MENU */
+
+#top {
+  display: flex;
+  background: $rojo;
+  height: 50px; 
+  width: 100%;
+
+    header {
+    box-sizing: border-box;
+    margin: auto;
+    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+
+      .topmenu__boton--a {
+      font-size: 12px;
+      margin-left: 10px;
+      color: white;     
+      text-decoration: none;
+
+    }
+    
+    nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+      ul{
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+
+        li{
+          display: inline-block;
+
+          a{
+            margin-left: 10px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+          
+
+
+          }
+
+        }
+
+      }
+
+
+    }
+
+  }
+
+}
+
+
+.topmenu__boton--a:hover {
+  color: black;
+  text-decoration: underline !important;
+}
+
+/* VIDEO HOME */
+
+.home__video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative;
+}
+
+.home__video iframe, .home__video object, .home__video embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* SECCION LA ESCUELA */
+
+#la-escuela {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+   @include contenedor;
+
+     .escuela__boton {
+      margin: auto;
+      }
+
+      .escuela__boton--a {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+      background: $rojo;
+      color: white;
+      padding: 20px;
+
+      transition-duration: 1s  !important;
+      transition-timing-function: ease  !important;
+      transition-delay: 0s  !important;
+      }
+
+      .escuela__boton--a:hover {
+      color: black;
+      background: linear-gradient($amarillo , #d9b989);
+      }
+
+}
+
+
+
+/* SECCION QUIENES SOMOS */
+
+#quienes-somos {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @include contenedor;
+
+    .quienes-somos__img  {
+    width: 100%;
+    }
+}
+
+
+
+/* SECCION DONDE ESTAMOS */
+
+#donde-estamos {
+  padding-top: 70px;
+  padding-bottom: 70px;
+   @include contenedor;
+}
+
+
+/* SECCION GALERIA */
+
+#galeria {
+  padding-top: 70px;
+  padding-bottom: 70px;
+   @include contenedor;
+
+
+      .modal-content {
+          width: fit-content !important;
+      }
+
+      .modal-dialog {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn-close {
+        margin: auto;
+      }
+
+      .galeria__contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .galeria__miniatura img {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+      }
+
+      .galeria__miniatura button {
+        border: 0;
+      }
+
+
+      .galeria__miniatura:hover {
+        transform: scale(1.5);
+        transition: 800ms ease;
+        box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.5);
+      }
+}
+
+
+/* SECCION CONTACTO */
+#contacto {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @include contenedor;
+
+
+      .contacto__info {
+        margin-top: 20px;
+      }
+
+      .contacto__enlace {
+        display: block;
+        padding: 2px;
+        text-decoration: none;
+        font-weight: 800;
+        color: $rojo;
+
+      }
+
+      textarea {
+        font-family: 'Raleway';
+        padding: 10px;
+      }
+
+      input {
+        width: 100%;
+        padding: 7px;
+        margin: 5px 5px 5px 0px;
+        font-family: 'Raleway';
+      }
+
+      .consulta-form {
+        height: 100px;
+        width: 100%;
+      }
+
+      .check {
+        width: 10%;
+      } 
+
+      .contacto-boton {
+        width: 100%;
+      }
+
+      .contacto__formulario {
+        margin-top: 20px;
+      }
+
+}
+
+
+/*ESCUELA PAGINA */
+
+#inicio {
+  background-color: gray;
+  padding: 25px;
+}
+
+
+.escuela__contenedor2{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  @include contenedor;
+}
+
+.escuela__contenido{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+      p {
+      display: inline-block;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      }
+
+      h4 {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      }
+}
+
+
+
+.img-escuela {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.escuela-middle-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  
+}
+
+.img-escuela-2 {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+
+/* FOOTER */
+
+#footer {
+  background: $rojo;
+  padding-top: 20px;
+  margin-top: 20px; 
+}
+
+.footer__contenedor {
+
+  margin: auto;
+  color: white;
+
+}
+
+.footer__row {
+  align-items: center;
+}
+
+.footer__logo--img {
+  display: block;
+  margin: auto;
+  filter: invert(100%);
+
+}
+
+.footer__copyright   {
+  margin: 0;
+  text-align: center;
+}
+
+.footer__link {
+  color: white;
+}
