@@ -70,13 +70,12 @@ body {
   #top header {
     box-sizing: border-box;
     margin: auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between; }
     #top header .topmenu__boton--a {
       font-size: 12px;
-      margin-left: 10px;
       color: white;
       text-decoration: none; }
     #top header nav {
@@ -221,6 +220,14 @@ body {
     margin-top: 15px;
     text-decoration: none; }
   #contacto .contacto__enlace {
+    font-size: calc(0.4em + 1vw);
+    display: block;
+    padding: 2px;
+    text-decoration: none;
+    font-weight: 800;
+    color: #B04900; }
+  #contacto .contacto__enlace--mail {
+    font-size: calc(0.4em + 1vw);
     display: block;
     padding: 2px;
     text-decoration: none;
@@ -246,7 +253,7 @@ body {
 
 /*ESCUELA PAGINA */
 #inicio {
-  background-color: gray;
+  background-color: #776329;
   padding: 25px; }
 
 .escuela__contenedor2 {
