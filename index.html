@@ -198,19 +198,21 @@
 							<p class="contacto__direccion">Paraje Sala Esculla, Iruya, Salta, Argentina.</p>
 							<a class="contacto__enlace" href="mailto:direccion@escuelasalaesculla.com.ar">direccion@escuelasalaesculla.com.ar</a>
 							<a class="contacto__enlace" href="tel:+543875037123">+54 3875 037123</a>
-							<div><a class="contacto__icono" href="https://facebook.com" >F</a><a class="contacto__enlace --redes" href="https://facebook.com">Facebook</a></div>
-							<a class="contacto__enlace --redes" href="https://instagram.com">Instagram</a>
+							<a class="contacto__icono" href="https://facebook.com" >F</a><a class="contacto__icono" href="https://instagram.com" >d</a>
 						</div>
 						<div class="contacto__formulario col-lg-6 col-sm-12">
 							<strong class="contacto__nombre">Envianos un mensaje</strong>
 							<div class="contacto__inputs">
-								<form> 					
+								<form action="/cgi-sys/form-mail.cgi" method="post">	
 			  					<input type="text" id="fname" name="fname" placeholder="Nombre"></br>  					
 			 				 	<input type="text" id="tel" name="tel" placeholder="Teléfono"></br>   				 	
 			 				 	<input type="email" id="email" name="email" placeholder="Email"></br> 				 	
 			 				 	<textarea class="consulta-form" type="text" id="comentario" name="comentario" placeholder="Escribi tu consulta"></textarea></br>
 			 				 	<input class="check" type="checkbox" name="newsletter"> Acepto recibir novedades en mi correo.</br>
-			 				 	<input class="contacto-boton" type="submit" id="enviar" name="enviar" placeholder="Enviar"></br>
+			 				 	<input class="contacto-boton" type="submit" id="enviar" name="enviar" placeholder="Enviar" value="Enviar" name="B1" /></br> 
+								<input type="hidden" value="doreccion@escuelasalaesculla.com.ar" name="recipient" />
+								<input type="hidden" value="http://www.escuelasalaesculla.com.ar/" name="redirect" />
+								<input type="hidden" value="Formulario enviado por WEB" name="subject" />
 			 					</form>
 							</div>
 						</div>
